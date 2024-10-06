@@ -146,10 +146,7 @@ def binary_to_hex(binary_str):
     hex_value = hex(decimal_value)[2:]
     return hex_value.upper()  
 
-# Example usage
-binary_string = "110101101011"  # Example binary string
-hex_result = binary_to_hex(binary_string)
-print(f"Binary: {binary_string} => Hex: {hex_result}")
+
 
 def ip_on_binary_rep(binary_representation):
     
