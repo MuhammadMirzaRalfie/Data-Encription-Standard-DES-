@@ -138,6 +138,18 @@ def str_to_bin(user_input):
 def binary_to_ascii(binary_str):
     ascii_str = ''.join([chr(int(binary_str[i:i+8], 2)) for i in range(0, len(binary_str), 8)])
     return ascii_str
+def binary_to_hex(binary_str):
+    if not all(bit in '01' for bit in binary_str):
+        raise ValueError("Input must be a binary string.")
+
+    decimal_value = int(binary_str, 2)
+    hex_value = hex(decimal_value)[2:]
+    return hex_value.upper()  
+
+# Example usage
+binary_string = "110101101011"  # Example binary string
+hex_result = binary_to_hex(binary_string)
+print(f"Binary: {binary_string} => Hex: {hex_result}")
 
 def ip_on_binary_rep(binary_representation):
     
